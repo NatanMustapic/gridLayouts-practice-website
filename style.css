@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(34, 37, 49);
+}
+
+.navbar {
+    display: flex;
+    height: 25px;
+    background-color: black;
+    padding: 20px;
+    text-align: right;
+    font-size: larger;
+    box-shadow: 0 -2px 10px #45829e;
+    margin-bottom: 15px;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.navbar>a {
+    color: #45829e;
+    text-decoration: none;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.navbar>a:hover {
+    color: #66fcf1;
+    font-size: x-large;
+}
+
+section>h2 {
+    text-align: center;
+    color: #c5c6c7;
+}
+
+section {
+    padding: 10px;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    color: rgb(34, 37, 49);
+    gap: 30px;
+    justify-items: center;
+}
+
+.portfolio-item {
+    height: 150px;
+    width: 175px;
+    background-color: #45829e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.portfolio-item:nth-child(even) {
+    background-color: transparent;
+    border: 2px solid #45829e;
+    color: #c5c6c7;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-template-areas:
+        "form form . fb tw"
+        "form form . yt ig";
+
+    gap: 20px;
+}
+
+.facebook,
+.twitter,
+.youtube,
+.instagram {
+    width: 150px;
+    height: 150px;
+    color: #c5c6c7;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 7px #45829e;
+    background-color: #0b0c10;
+}
+
+.facebook > span, .twitter > span, .youtube > span, .instagram > span {
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+
+.form {grid-area: form;}
+.facebook {grid-area: fb;}
+.twitter {grid-area: tw;}
+.youtube {grid-area: yt;}
+.instagram {grid-area: ig;}
+
+label {
+    display: block;
+    color: #66fcf1;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #66fcf1;
+    padding: 15px 8px;
+    border-radius: 5px;
+    background-color: rgba(197, 198, 199, .2);
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+
+    height: 25px;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: larger;
+    box-shadow: 0 2px 10px #45829e;
+    margin-top: 15px;
+
+    color: #45829e;
+
+}
